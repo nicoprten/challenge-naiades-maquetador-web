@@ -169,6 +169,9 @@ body{
                     margin: 0;
                     width: 60%;
                 }
+                @include mobile{
+                    width: 100%;
+                }
                 &:last-of-type{
                     margin-top: 1em;
                 }

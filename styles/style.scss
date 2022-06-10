@@ -1,0 +1,246 @@
+$violet: #23135f;
+$light-violet: #7c55b5;
+$black: #121212;
+$white: #ffffff;
+$grey: #f4f4f4;
+
+@mixin tablet{
+    @media only screen and (max-width: 700px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media only screen and (max-width: 450px){
+        @content;
+    }
+}
+
+@mixin button{
+    text-decoration: none;
+    background-color: $violet;
+    padding: .5em 1em;
+    font-weight: bold;
+    transition: .25s;
+    color: white;
+    &:hover{
+        cursor: pointer;
+        color: $black;
+        background-color: $white;
+        transition: .25s;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+body{
+    background-color: $white;
+    width: 700px;
+    margin: 0 auto;
+    @include tablet{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        background: url(./../utilities/bg-header.jpg) no-repeat center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding-left: 3em;
+        @include mobile{
+            padding-left: 1em;
+        }
+        h1{
+            text-indent: -2000px;
+            width: 165px;
+            height: 60px;
+            margin-top: 45px;
+            background-image: url('./../utilities/logo-generic.png');
+            background-repeat: no-repeat;
+            @include mobile{
+                margin-top: 20px;
+            }
+        }
+        .container-intro{
+            display: flex;
+            flex-direction: column;
+            margin: 9em 0 4em 0;
+            a{
+                width: 100px;
+                text-align: center;
+                @include button;
+            }
+            p{
+                font-size: 50px;
+                font-weight: bold;
+                width: 400px;
+                margin-top: 0.2em;
+                @include mobile{
+                    width: 80%;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    .container-attendance{
+        display: flex;
+        background-color: $white;
+        @include tablet{
+            flex-direction: column;
+        }
+        .container-text{
+            padding: 2em;
+            width: 60%;
+            @include tablet{
+                width: 100%;
+            }
+            p{
+                margin: 1em 0;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+        .container-date{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            width: 40%;
+            background-color: $grey;
+            gap: 1em;
+            @include tablet{
+                width: 100%;
+            }
+            img{
+                width: 150px;
+            }
+            .date-info{
+                display: flex;
+                flex-direction: column;
+                gap: .2em;
+                p{
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 1.2em;
+                    &:first-of-type{
+                        color: $violet;
+                    }
+                    &:last-of-type{
+                        color: $black;
+                    }
+                }
+            }
+            a{
+                @include button;
+            }
+        }
+    }
+    .container-video{
+        display: flex;
+        padding: 3em;
+        align-items: center;
+        background-image: url('./../utilities/bg-video.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include tablet{
+            flex-direction: column;
+            gap: 2em;
+        }
+        img{
+            @include mobile{
+                width: 80%;
+            }
+        }
+        .video-text{
+            color: $white;
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            p{
+                margin-left: 2.5em;
+                @include tablet{
+                    margin: 0;
+                    width: 60%;
+                }
+                &:last-of-type{
+                    margin-top: 1em;
+                }
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .container-speaker{
+        padding: 2.5em;
+        background-color: $white;
+        text-align: center;
+        p{
+            font-size: 30px;
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+            .remarkable{
+                font-weight: bold;
+                color: $violet;
+            }
+            .not-remarkable{
+                color: $light-violet;
+            }
+        }
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        background-color: $light-violet;
+        padding: 2em 3em;
+        color: $white;
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            gap: 3em;
+            text-align: center;
+        }
+        .footer-contact{
+            font-size: .8em;
+            margin-top: 1em;
+            @include mobile{
+                font-size: 1em;
+            }
+            p{
+                &:first-of-type{
+                    margin: .5em 0;
+                }
+                &:last-of-type{
+                    color: $violet;
+                    font-weight: bold;
+                }
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+        .footer-rights{
+            img{
+                margin-bottom: .2em;
+            }
+            p{
+                font-size: .8em;
+                text-align: right;
+                @include mobile{
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

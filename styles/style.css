@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Helvetica Neue",Helvetica,Arial; }
+
+body {
+  background-color: #ffffff;
+  width: 700px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 700px) {
+    body {
+      width: 100%; } }
+  body header {
+    width: 100%;
+    background: url(./../utilities/bg-header.jpg) no-repeat center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em; }
+    @media only screen and (max-width: 450px) {
+      body header {
+        padding-left: 1em; } }
+    body header h1 {
+      text-indent: -2000px;
+      width: 165px;
+      height: 60px;
+      margin-top: 45px;
+      background-image: url("./../utilities/logo-generic.png");
+      background-repeat: no-repeat; }
+      @media only screen and (max-width: 450px) {
+        body header h1 {
+          margin-top: 20px; } }
+    body header .container-intro {
+      display: flex;
+      flex-direction: column;
+      margin: 9em 0 4em 0; }
+      body header .container-intro a {
+        width: 100px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #23135f;
+        padding: .5em 1em;
+        font-weight: bold;
+        transition: .25s;
+        color: white; }
+        body header .container-intro a:hover {
+          cursor: pointer;
+          color: #121212;
+          background-color: #ffffff;
+          transition: .25s; }
+      body header .container-intro p {
+        font-size: 50px;
+        font-weight: bold;
+        width: 400px;
+        margin-top: 0.2em; }
+        @media only screen and (max-width: 450px) {
+          body header .container-intro p {
+            width: 80%;
+            font-size: 35px; } }
+  body .container-attendance {
+    display: flex;
+    background-color: #ffffff; }
+    @media only screen and (max-width: 700px) {
+      body .container-attendance {
+        flex-direction: column; } }
+    body .container-attendance .container-text {
+      padding: 2em;
+      width: 60%; }
+      @media only screen and (max-width: 700px) {
+        body .container-attendance .container-text {
+          width: 100%; } }
+      body .container-attendance .container-text p {
+        margin: 1em 0; }
+        body .container-attendance .container-text p span {
+          font-weight: bold; }
+    body .container-attendance .container-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+      width: 40%;
+      background-color: #f4f4f4;
+      gap: 1em; }
+      @media only screen and (max-width: 700px) {
+        body .container-attendance .container-date {
+          width: 100%; } }
+      body .container-attendance .container-date img {
+        width: 150px; }
+      body .container-attendance .container-date .date-info {
+        display: flex;
+        flex-direction: column;
+        gap: .2em; }
+        body .container-attendance .container-date .date-info p {
+          font-weight: bold;
+          text-align: center;
+          font-size: 1.2em; }
+          body .container-attendance .container-date .date-info p:first-of-type {
+            color: #23135f; }
+          body .container-attendance .container-date .date-info p:last-of-type {
+            color: #121212; }
+      body .container-attendance .container-date a {
+        text-decoration: none;
+        background-color: #23135f;
+        padding: .5em 1em;
+        font-weight: bold;
+        transition: .25s;
+        color: white; }
+        body .container-attendance .container-date a:hover {
+          cursor: pointer;
+          color: #121212;
+          background-color: #ffffff;
+          transition: .25s; }
+  body .container-video {
+    display: flex;
+    padding: 3em;
+    align-items: center;
+    background-image: url("./../utilities/bg-video.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media only screen and (max-width: 700px) {
+      body .container-video {
+        flex-direction: column;
+        gap: 2em; } }
+    @media only screen and (max-width: 450px) {
+      body .container-video img {
+        width: 80%; } }
+    body .container-video .video-text {
+      color: #ffffff; }
+      @media only screen and (max-width: 700px) {
+        body .container-video .video-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center; } }
+      body .container-video .video-text p {
+        margin-left: 2.5em; }
+        @media only screen and (max-width: 700px) {
+          body .container-video .video-text p {
+            margin: 0;
+            width: 60%; } }
+        body .container-video .video-text p:last-of-type {
+          margin-top: 1em; }
+        body .container-video .video-text p span {
+          font-weight: bold; }
+  body .container-speaker {
+    padding: 2.5em;
+    background-color: #ffffff;
+    text-align: center; }
+    body .container-speaker p {
+      font-size: 30px; }
+      @media only screen and (max-width: 450px) {
+        body .container-speaker p {
+          display: flex;
+          flex-direction: column;
+          gap: 1em; } }
+      body .container-speaker p .remarkable {
+        font-weight: bold;
+        color: #23135f; }
+      body .container-speaker p .not-remarkable {
+        color: #7c55b5; }
+  body footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7c55b5;
+    padding: 2em 3em;
+    color: #ffffff; }
+    @media only screen and (max-width: 450px) {
+      body footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        text-align: center; } }
+    body footer .footer-contact {
+      font-size: .8em;
+      margin-top: 1em; }
+      @media only screen and (max-width: 450px) {
+        body footer .footer-contact {
+          font-size: 1em; } }
+      body footer .footer-contact p:first-of-type {
+        margin: .5em 0; }
+      body footer .footer-contact p:last-of-type {
+        color: #23135f;
+        font-weight: bold; }
+      body footer .footer-contact p span {
+        font-weight: bold; }
+    body footer .footer-rights img {
+      margin-bottom: .2em; }
+    body footer .footer-rights p {
+      font-size: .8em;
+      text-align: right; }
+      @media only screen and (max-width: 450px) {
+        body footer .footer-rights p {
+          font-size: 1em;
+          text-align: center; } }
